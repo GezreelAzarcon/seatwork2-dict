@@ -1,5 +1,11 @@
 # Create a menu with 3 options
-
+print("=================================")
+print("||            MENU             ||")
+print("---------------------------------")
+print("||       Add an item --> 1     ||")
+print("||   Search for an item --> 2  ||")
+print("||      Exit Program --> 3     ||")
+print("=================================")
 # Use While True here
     # create an empty list (Created dictionaries will be saved here)
     # Ask for user input on what to do
