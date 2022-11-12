@@ -7,10 +7,8 @@ print("||   Search for an item --> 2  ||")
 print("||      Exit Program --> 3     ||")
 print("=================================")
 
-count = 0
-
-# create an empty list (Created dictionaries will be saved here)
-userlist = []
+# create an empty main dictionary (Created dictionaries will be saved here)
+alldict = {}
 
 # Use While True here
 while True:
@@ -20,32 +18,44 @@ while True:
     
     # If 1, add
     if menu == 1:
-        
-        # Create an empty dictionary variable (ask user for input on variable name)
-        count += 1
-        usernum = "User"+str(count) 
 
         # Ask input for every personal data
-        name = input("What is your name? ")
+        username = input("What is your name? ")
         age = int(input("What is your age? "))
         address = input("What is your address? ")
         phone_num = input("What is your phone number? ")
+        print("You have successfully added this user")
 
-        # Append gathered input into the empty dictionary
-        # Append the new dictionary into the empty list
-        userlist.append({usernum:
-                            {"Name": name,
-                             "Age": age,   
-                             "Address": address,
-                             "Phone Number": phone_num
+        # Append gathered input into the empty main dictionary
+        alldict[username] = {
+                            "Name": username,
+                            "Age": age,   
+                            "Address": address,
+                            "Phone Number": phone_num
                             }     
-                        })
-        print(userlist[:]['User']['Name'])
+        print(alldict)
+        
+        print(alldict[username]['Name'])
+        print(alldict[username]['Age'])
+        print(alldict[username]['Address'])
+        print(alldict[username]['Phone Number'])
     # If 2, search
+    if menu == 2:
+        who = input("Who do you want to find? Enter First Name: ")
+        if who in alldict:
+            print("User Exists!")
+        else:
+            print("User doesnt exist!")
+        
+    
         # Use input to check if the dict user wants exists
         # If exists, print the dictionary using for loop
         # If not Continue
     # If 3, ask if user wants to exit
         # Create an input asking user if they want to quit
-            # If yes, use break
+    if menu == 3:
+        quitq = input("Do you want to quit? [y/n] ")
+                # If yes, use break
+        if quitq == 'y':
+            break
             # else, continue
