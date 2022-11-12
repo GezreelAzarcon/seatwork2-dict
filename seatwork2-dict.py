@@ -6,14 +6,41 @@ print("||       Add an item --> 1     ||")
 print("||   Search for an item --> 2  ||")
 print("||      Exit Program --> 3     ||")
 print("=================================")
+
+count = 0
+
+# create an empty list (Created dictionaries will be saved here)
+userlist = []
+
 # Use While True here
-    # create an empty list (Created dictionaries will be saved here)
+while True:
+
     # Ask for user input on what to do
+    menu = int(input("What do you want to do? "))
+    
     # If 1, add
-        # Create an empty dictionary variable
+    if menu == 1:
+        
+        # Create an empty dictionary variable (ask user for input on variable name)
+        count += 1
+        usernum = "User"+str(count) 
+
         # Ask input for every personal data
+        name = input("What is your name? ")
+        age = int(input("What is your age? "))
+        address = input("What is your address? ")
+        phone_num = input("What is your phone number? ")
+
         # Append gathered input into the empty dictionary
         # Append the new dictionary into the empty list
+        userlist.append({usernum:
+                            {"Name": name,
+                             "Age": age,   
+                             "Address": address,
+                             "Phone Number": phone_num
+                            }     
+                        })
+        print(userlist[:]['User']['Name'])
     # If 2, search
         # Use input to check if the dict user wants exists
         # If exists, print the dictionary using for loop
