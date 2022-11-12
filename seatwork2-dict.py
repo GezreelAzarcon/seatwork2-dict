@@ -1,40 +1,18 @@
-#Write a python program for contact tracing:
+# Create a menu with 3 options
 
-#- Display a menu of options
-#	Menu:
-#		 1 -> Add an item
-#		 2 -> Search
-#		 3 -> Exit (y/n)
-#- Allow user to select item in the menu (check if valid)
-#- Perform the selected option
-#		- Option 1: Ask personal data for contact tracing (Listed are sample only, add more)
-#				   Use dictionary to store the info
-#				   Use the full name as key
-#				   The value is another dictionary of personal information
-#		- Option 2: Search, ask full name then display the record
-#		- Option 3: Ask the user if want to exit or retry.
-
-#Note: 
-#- Your program should be uploaded to github before 4pm
-#- Record a demo presenting your program
-#- Send the demo or link of demo directly to my messenger
-
-#Example Output:
-
-#Menu:
-# 1 -> Add an item
-# 2 -> Search
-# 3 -> Exit (y/n)
-
-#What do you want to do? (1-3): 1
-#Full name: Danilo Madrigalejos
-#Age: 30
-#Address: Eastwood
-#Phone number: 1234567890
-#Saved!
-#What do you want to do? (1-3): 2
-#Full name: Danilo Madrigalejos
-#Age: 30
-#Address: Eastwood
-#Phone number: 1234567890 What do you want to do? (1-3): 3
-#Exit? n
+# Use While True here
+    # create an empty list (Created dictionaries will be saved here)
+    # Ask for user input on what to do
+    # If 1, add
+        # Create an empty dictionary variable
+        # Ask input for every personal data
+        # Append gathered input into the empty dictionary
+        # Append the new dictionary into the empty list
+    # If 2, search
+        # Use input to check if the dict user wants exists
+        # If exists, print the dictionary using for loop
+        # If not Continue
+    # If 3, ask if user wants to exit
+        # Create an input asking user if they want to quit
+            # If yes, use break
+            # else, continue
