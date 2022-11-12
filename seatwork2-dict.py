@@ -32,18 +32,17 @@ while True:
                             "Age": age,   
                             "Address": address,
                             "Phone Number": phone_num
-                            }     
-        print(alldict)
-        
-        print(alldict[username]['Name'])
-        print(alldict[username]['Age'])
-        print(alldict[username]['Address'])
-        print(alldict[username]['Phone Number'])
+                            }
+    print(alldict)     
     # If 2, search
     if menu == 2:
         who = input("Who do you want to find? Enter First Name: ")
         if who in alldict:
             print("User Exists!")
+            print("Name:", alldict[who]['Name'])
+            print("Age:", alldict[who]['Age'])
+            print("Address", alldict[who]['Address'])
+            print("Phone Number", alldict[who]['Phone Number'])
         else:
             print("User doesnt exist!")
         
